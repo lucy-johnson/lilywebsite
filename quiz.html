@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Lily Quiz</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="Lily Icon.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Lily Quiz">
+        <meta author="Lucy Johnson">
+        <meta keywords="lily, flower, quiz">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+        <header>
+
+            <nav>
+
+                <ul>
+                    <li><a href="quiz.html" id="active">Quiz</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="photo app.html">Photo App</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+
+            </nav>
+
+        <h1>Quiz</h1>
+        <p>A quiz about lilies</p>
+
+        </header>
+
+        <main>
+
+            <div>
+                <form name="Quiz">
+
+                    <fieldset>
+                    
+                        <label for="personsName">Enter your name here: </label>
+                        <input class="typebox" id="personsName" type="text" name="personsName">
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Which of the following flowers is not a species of lily?</legend>
+
+                        <input id="easterLily" type="radio" name="species" value="easterLily">
+                        <label for="easterLily">Easter Lily</label>
+
+                        <br>
+
+                        <input id="turksCapLily" type="radio" name="species" value="turksCapLily">
+                        <label for="turksCapLily">Turk's-cap Lily</label>
+
+                        <br>
+
+                        <input id="cannaLily" type="radio" name="species" value="cannaLily">
+                        <label for="cannaLily">Canna Lily</label><!--answer-->
+                    
+                        <br>
+                    
+                        <input id="goldenRayedLily" type="radio" name="species" value="goldenRayedLily">
+                        <label for="goldenRayedLily">Golden-rayed Lily</label>
+                    
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Which of the following flowers is a hybrid lily?</legend>
+
+                        <input id="stargazerLily" type="radio" name="hybrid" value="stargazerLily">
+                        <label for="stargazerLily">Stargazer Lily</label><!--answer-->
+
+                        <br>
+
+                        <input id="madonnaLily" type="radio" name="hybrid" value="madonnaLily">
+                        <label for="madonnaLily">Madonna Lily</label>
+
+                        <br>
+
+                        <input id="tigerLily" type="radio" name="hybrid" value="tigerLily">
+                        <label for="tigerLily">Tiger Lily</label>
+                    
+                        <br>
+                    
+                        <input id="humboldtsLily" type="radio" name="hybrid" value="humboldtsLily">
+                        <label for="humboldtsLily">Humboldt's Lily</label>
+                    
+                    </fieldset>
+
+                </form>
+            </div>
+
+            <br>
+
+            <input id="button" type="button" value="Submit" onclick="checkAnswers()">
+
+        </main>
+
+        <footer> Copyright Lucy Johnson 2023</footer>
+
+    </body>
+
+</html>

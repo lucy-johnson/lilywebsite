@@ -1,0 +1,268 @@
+<!DOCTYPE . html>
+
+<html lang="en-gb">
+
+
+
+    <head>
+
+        <title>Lilies Photo App</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="Lily Icon.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Lily Photo App">
+        <meta author="Lucy Johnson">
+        <meta keywords="lily, flower, photo app">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+
+
+    <body>
+
+        
+        <header>
+
+            <nav>
+
+                <ul>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="photo app.html" id="active">Photo App</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+
+            </nav>
+
+            <div>
+
+                <h1>Lilies Photo App</h1>
+                <p>Welcome to my photo app where you can learn information about different species of lilies.</p>
+
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <section>
+
+                <div class="container">
+
+                    <img src="Stargazer Lily.jpg" alt="Image of a of a pink Stargazer Lily">
+
+                </div>
+                
+
+                <div id="facts">
+
+                    <h3>Facts about Lilies</h3>
+                    <p>Here are some interesting facts about lilies</p>
+                    <ul>
+                        <li>The scientific name for lilies is Lilium.</li>
+                        <li>They come from the family of Liliaceae.</li>
+                        <li>They are herbaceous flowering plants that grow from bulbs.</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section>
+                
+                <div class="container">
+
+                    <img src="Orange Pixie.jpg" alt="Image of an Orange Pixie">
+                    
+                </div>
+
+                <div id="favourites">
+                    <h4>My Favourite Species of Lilies</h4>
+                    <p>Here are my top three favourite species of lilies</p>
+                    <ol>
+                        <li>Stargazer Lily</li>
+                        <li>Orange Pixie</li>
+                        <li>Mariposa Lily</li>
+                    </ol>
+                </div>
+            
+            </section>
+
+
+            <section>
+            
+                <div class="container">
+
+                    <img src="Mariposa Lily.jpg" alt="Image of a white Mariposa Lily">
+
+                </div>
+
+                <p>For more information about Lilies, visit the <a href="https://en.wikipedia.org/wiki/Lilium" class="wikiLink">Lilium wikipedia Page</a>.</p>
+            
+            </section> 
+
+            <section>
+                
+                <h2>Your favourite Lily</h2>
+                <form name="app" id="app">
+                    <fieldset class="quiz1">
+                        <legend>The pattern of your favourite type of Lily</legend>
+
+                        <input id="spotted" type="radio" name="pattern" value="spotted">
+                        <label for="spotted">Spotted</label>
+
+                        <br>
+
+                        <input id="striped" type="radio" name="pattern" value="striped">
+                        <label for="striped">Striped</label>
+
+                        <br>
+
+                        <input id="gradient" type="radio" name="pattern" value="gradient">
+                        <label for="gradient">Gradient</label>
+                    
+                        <br>
+                    
+                        <input id="solid" type="radio" name="pattern" value="solid">
+                        <label for="solid">Solid</label>
+                    
+
+                    </fieldset>
+
+
+                    <fieldset class="quiz2">
+                        <legend>The colour(s) of your favourite type of Lily</legend>
+
+                        <input id="white" type="checkbox" name="colour" value="white">
+                        <label for="white">White</label>
+
+                        <br>
+
+                        <input id="pink" type="checkbox" name="colour" value="pink">
+                        <label for="pink">Pink</label>
+
+                        <br>
+
+                        <input id="red" type="checkbox" name="colour" value="red">
+                        <label for="red">Red</label>
+
+                        <br>
+            
+                        <input id="orange" type="checkbox" name="colour" value="orange">
+                        <label for="orange">Orange</label>
+
+                        <br>
+
+                        <input id="yellow" type="checkbox" name="colour" value="yellow">
+                        <label for="yellow">Yellow</label>
+
+                        <br>
+
+                        <input id="green" type="checkbox" name="colour" value="green">
+                        <label for="green">Green</label>
+
+                        <br>
+
+                        <input id="blue" type="checkbox" name="colour" value="blue">
+                        <label for="blue">Blue</label>
+                    
+                        <br>
+
+                        <input id="purple" type="checkbox" name="colour" value="purple">
+                        <label for="purple">Purple</label>
+
+                        <br>
+
+                        <input id="brown" type="checkbox" name="colour" value="brown">
+                        <label for="brown">Brown</label>
+
+                        <br>
+
+                        <input id="grey" type="checkbox" name="colour" value="grey">
+                        <label for="grey">Grey</label>
+
+                        <br>
+
+                        <input id="black" type="checkbox" name="colour" value="black">
+                        <label for="black">Black</label>
+
+                    </fieldset>
+
+                    <fieldset class="quiz3">
+                        <legend>The name of your favourite Lily</legend>
+                        <input class="typebox" id="name"type="text" name="type">
+                    </fieldset>
+
+                    <fieldset class="quiz3">
+                        <legend>A photo of your favourite Lily</legend>
+                        <label for="url">Enter a photo URL here: </label>
+                        <input class="typebox" id="url" type="text" name="photourl">
+                    </fieldset>
+
+                    <br>
+                    <br>
+
+                    <input id="button" type="button" value="Submit" onclick="saveFile()">
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer> Copyright Lucy Johnson 2023</footer>
+
+    </body>
+
+
+</html>
+
+
+
+<script>
+    let saveFile = () => {
+
+        //This is setting the checkboxes as an array
+        var form = document.getElementById('app');
+        var myArray = [];
+            form.querySelectorAll('input').forEach(function (input) {
+                if(input.type === 'checkbox'  && input.checked) {
+                    myArray.push(input.value)
+                }
+            })
+
+        form = document.forms.app.elements;
+        const pattern = form.pattern.value;
+        const colour = myArray;
+        const type = form.type.value
+        const link = form.photourl.value;
+        
+        // This variable stores all the data.
+        let data = 
+        '\r Pattern: ' + pattern + ' \r\n ' + 
+            'Colour: ' + colour + ' \r\n ' + 'Type: ' + type + ' \r\n ' +
+            'Link: ' + link 
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        const sFileName = "filename";	   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        newLink.innerHTML = "Download File:";
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+    }
+</script>
